@@ -1,0 +1,38 @@
+<h2 class="text-center">Student List</h2>
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Section</th>
+        <th>Academic_Course_ID</th>
+        <th>Campus_ID</th>
+        <th>Year_ID</th>
+        <th>Course_ID</th>
+        <th>Section_ID</th>
+        <th>Roll_No</th>
+        <th>Route_ID</th>
+        <th>Stop_ID</th>
+        <th>Vehicle_ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students">
+        <td>{{ student.id }}</td>
+        <td>{{ student.section_name }}</td>
+        <td>{{ student.academic_course_id }}</td>
+        <td>{{ student.campus_id }}</td>
+        <td>{{ student.year_id }}</td>
+        <td>{{ student.course_id }}</td>
+        <td>{{ student.section_id }}</td>
+        <td>{{ student.roll_no }}</td>
+        <td>{{ student.route_id }}</td>
+        <td>{{ student.stop_id }}</td>
+        <td>{{ student.vehicle_id }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p *ngIf="students.length === 0" class="text-danger text-center">No students found.</p>
